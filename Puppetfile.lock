@@ -19,11 +19,6 @@ GITHUBTARBALL
     dockutil (0.2.1)
 
 GITHUBTARBALL
-  remote: boxen/puppet-dropbox
-  specs:
-    dropbox (1.4.1)
-
-GITHUBTARBALL
   remote: boxen/puppet-git
   specs:
     git (2.7.1)
@@ -69,16 +64,6 @@ GITHUBTARBALL
     sudo (1.0.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-vagrant
-  specs:
-    vagrant (3.2.2)
-
-GITHUBTARBALL
-  remote: boxen/puppet-vmware_fusion
-  specs:
-    vmware_fusion (1.2.0)
-
-GITHUBTARBALL
   remote: glarizza/puppet-property_list_key
   specs:
     property_list_key (0.2.1)
@@ -103,7 +88,6 @@ DEPENDENCIES
   boxen (= 3.10.1)
   dash (= 1.0.0)
   dockutil (= 0.2.1)
-  dropbox (= 1.4.1)
   git (= 2.7.1)
   go (= 2.1.0)
   homebrew (= 1.11.2)
@@ -117,6 +101,4 @@ DEPENDENCIES
   repository (= 2.3.0)
   stdlib (= 4.2.1)
   sudo (= 1.0.0)
-  vagrant (= 3.2.2)
-  vmware_fusion (= 1.2.0)
 

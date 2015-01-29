@@ -31,7 +31,6 @@ class people::wbs75 {
     class {'people::wbs75::config::system_config': } ->
     class {'people::wbs75::config::global_config': } ->
     class {'people::wbs75::config::user_config': } ->
-    class {'people::wbs75::loginitems': } ->
     class {'people::wbs75::config::dock_config': } ->
     class {'people::wbs75::config::diskutility_config': } ->
     class {'people::wbs75::config::finder_config': } ->
