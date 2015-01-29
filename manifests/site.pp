@@ -1,6 +1,6 @@
 require boxen::environment
 require homebrew
-require gcc
+# require gcc
 
 Exec {
   group       => 'staff',
@@ -12,6 +12,7 @@ Exec {
     "${boxen::config::home}/rbenv/bin",
     "${boxen::config::home}/rbenv/plugins/ruby-build/bin",
     "${boxen::config::home}/homebrew/bin",
+    '/usr/local/bin',
     '/usr/bin',
     '/bin',
     '/usr/sbin',
@@ -19,7 +20,7 @@ Exec {
   ],
 
   environment => [
-    "HOMEBREW_CACHE=${homebrew::config::cachedir}",
+    'HOMEBREW_CACHE=/Library/Caches/Homebrew',
     "HOME=/Users/${::boxen_user}"
   ]
 }
@@ -31,7 +32,8 @@ File {
 
 Package {
   provider => homebrew,
-  require  => Class['homebrew']
+  require  => Class['homebrew'],
+  install_options => ['--build-from-source'],
 }
 
 Repository {
@@ -53,27 +55,27 @@ Homebrew::Formula <| |> -> Package <| |>
 
 node default {
   # core modules, needed for most things
-  include dnsmasq
+  # include dnsmasq
   include git
   include hub
-  include nginx
+  # include nginx
 
   # fail if FDE is not enabled
-  if $::root_encrypted == 'no' {
-    fail('Please enable full disk encryption and try again')
-  }
+  # if $::root_encrypted == 'no' {
+  #   fail('Please enable full disk encryption and try again')
+  # }
 
   # node versions
-  nodejs::version { 'v0.6': }
-  nodejs::version { 'v0.8': }
-  nodejs::version { 'v0.10': }
+  # nodejs::version { 'v0.6': }
+  # nodejs::version { 'v0.8': }
+  # nodejs::version { 'v0.10': }
 
   # default ruby versions
-  ruby::version { '1.9.3': }
-  ruby::version { '2.0.0': }
-  ruby::version { '2.1.0': }
-  ruby::version { '2.1.1': }
-  ruby::version { '2.1.2': }
+  # ruby::version { '1.9.3': }
+  # ruby::version { '2.0.0': }
+  # ruby::version { '2.1.0': }
+  # ruby::version { '2.1.1': }
+  # ruby::version { '2.1.2': }
 
   # common, useful packages
   package {
