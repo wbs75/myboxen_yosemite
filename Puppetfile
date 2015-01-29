@@ -61,13 +61,10 @@ github "sudo",        "1.0.0"
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
 
-github "dropbox",           "1.4.1"
-github "vmware_fusion",     "1.2.0"
 github "osx",               "2.8.0"
 github "dockutil",          "0.2.1"
 github "bash",              "1.2.0"
 github "dash",              "1.0.0"
-github "vagrant",           "3.2.2"
 
 mod "property_list_key",    "0.2.1",    :github_tarball => "glarizza/puppet-property_list_key"
 

@@ -2,7 +2,6 @@ class people::wbs75::applications {
 
     include bash
     include bash::completion
-    include vmware_fusion
 
     git::config::global { 'user.name':
         value => 'wbs75',
@@ -26,12 +25,5 @@ class people::wbs75::applications {
     package { 'ssh-copy-id': }
     package { 'wget': }
 
-    # class { 'vagrant':
-    #     version => '1.7.2'
-    # }
-
-    # vagrant::plugin { 'vagrant-vmware-fusion':
-    #     license => "/Users/${::luser}/Dropbox/config/Vagrant/fusion-6-license.lic",
-    # }
 }
 
